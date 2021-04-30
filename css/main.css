@@ -1,0 +1,108 @@
+@import url(style.css);
+/* Start Main Header */
+header.main {
+  position: relative;
+}
+header.main .slider {
+  position: relative;
+  background-image: url(../images/slider.jpg);
+  width: 100%;
+  height: 600px;
+  text-align: center;
+}
+header.main .slider .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darker-gray);
+  opacity: .7
+}
+header.main .welcome {
+  position: relative;
+  top: 280px;
+  z-index: 2
+}
+header.main .welcome h1 {color: var(--white)}
+header.main .welcome p {font-size: 20px;color: var(--white)}
+/* End Main Header */
+/* Start Main Nav */
+.navigation {
+  height: 80px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 30px;
+  background-color: var(--white);
+}
+.navigation .logo h4 {line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
+.navigation .logo h4:first-letter {
+  background-color: var(--light-orange);
+  border-radius: 50%;
+  padding: 0 .3em;
+  color: var(--white)
+}
+.navigation ul {line-height: 80px;text-transform: uppercase}
+.navigation li {
+  padding-right: 15px;
+  padding-left: 15px;
+  transition: all .5s ease;
+  cursor: pointer
+}
+.navigation li.active, nav li:hover {
+  background-color: var(--light-orange);
+  color: var(--white);
+}
+/* End Main Nav */
+/* Start About Me */
+section.about {padding-top: 60px;padding-bottom: 60px}
+section.about .image img {width: 300px;height: 300px}
+section.about .profile-info .profile-title {
+  border-bottom: 1px solid var(--light-gray);
+  margin-top: 32px;
+  margin-bottom: 20px
+}
+section.about .profile-info .profile-title h4 {color: var(--dark-gray);font-weight: 600}
+section.about .profile-info .profile-title h4 span {font-weight: 300}
+section.about .profile-info .profile-title p {font-size: 22px}
+section.about .profile-info li {margin-top: 10px}
+section.about .profile-info li strong {
+  width: 100px;
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase
+}
+section.about .profile-info li span {color: var(--light-gray)}
+@media (max-width: 400px) {
+  section.about .image img {width: 200px;height: 200px}
+}
+/* End About Me */
+/* Start Skills */
+section.skills {background-color: var(--lighter-gray);padding-top: 60px;padding-bottom: 60px}
+section.skills h2 {text-align: center}
+section.skills .progress-list {margin-top: 30px}
+section.skills .progress-info {margin-bottom: 20px}
+section.skills .progress-info .progress-title {margin-top: 6px}
+section.skills .progress-info .progress-percent {
+  position: relative;
+  background-color: rgba(243,69,114, .1);
+  height: 30px
+}
+section.skills .progress-info .progress-percent span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 5px;
+  background-color: var(--light-orange);
+  color: var(--white)
+}
+section.skills .progress-info:first-of-type .progress-percent span {width: 90%}
+section.skills .progress-info:nth-of-type(2) .progress-percent span {width: 85%}
+section.skills .progress-info:nth-of-type(3) .progress-percent span {width: 80%}
+section.skills .progress-info:nth-of-type(4) .progress-percent span {width: 80%}
+section.skills .progress-info:nth-of-type(5) .progress-percent span {width: 75%}
+/* End Skills */
