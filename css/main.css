@@ -27,7 +27,14 @@ header.main .welcome p {font-size: 20px;color: var(--white);width: 80%;margin: 0
 header.main .welcome button {margin-top: 20px}
 /* End Main Header */
 /* Start Main Nav */
-.navigation {margin-top: 30px;overflow: hidden;}
+.navigation {
+  margin-top: 30px;
+  overflow: hidden;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease
+}
 .navigation.scrolling {
   position: fixed;
   left: 0;
@@ -40,7 +47,11 @@ header.main .welcome button {margin-top: 20px}
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
-  background-color: var(--white)
+  background-color: var(--white);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease
 }
 .navigation.scrolling .nav {padding-right: 0;padding-left: 0;}
 .nav .logo h4 {display: inline;line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
@@ -53,7 +64,7 @@ header.main .welcome button {margin-top: 20px}
   width: 33px;
   text-align: center;
   color: var(--white);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .nav ul {line-height: 80px;text-transform: uppercase}
 .nav li {
