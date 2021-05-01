@@ -297,8 +297,8 @@ footer .social a:hover img {margin-top: -5px}
   animation-duration: .5s;
 }
 .popup .item.active {visibility: visible}
-.popup .item .simplebar-track {display: none}
-.popup .item.active .simplebar-track {display: inline}
+.popup .item .simplebar-height-auto-observer {display: none}
+.popup .item.active .simplebar-height-auto-observer {display: block}
 .popup .item .overlay {
   position: absolute;
   width: 100%;
