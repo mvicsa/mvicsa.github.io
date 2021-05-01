@@ -150,6 +150,14 @@ let menuBTN = document.querySelector('.navigation .menu i'),
 menuBTN.onclick = () => navMenu.classList.add('active');
 menuClose.onclick = () => navMenu.classList.remove('active');
 
+navMenu.children[0].children.forEach((el) => {
+
+  let func = () => navMenu.classList.remove('active');
+
+  el.addEventListener('click', func);
+
+});
+
 /****************
 *     Popup     *
 ****************/
