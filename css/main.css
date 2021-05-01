@@ -7,7 +7,7 @@ header.main .slider {
   position: relative;
   background-image: url(../images/slider.jpg);
   width: 100%;
-  height: 600px;
+  height: 700px;
   text-align: center;
 }
 header.main .slider .overlay {
@@ -21,42 +21,127 @@ header.main .slider .overlay {
 }
 header.main .welcome {
   position: relative;
-  top: 280px;
+  top: 300px;
   z-index: 2
 }
 header.main .welcome h1 {color: var(--white)}
-header.main .welcome p {font-size: 20px;color: var(--white)}
+header.main .welcome p {font-size: 20px;color: var(--white);width: 80%;margin: 0 auto}
+header.main .welcome button {margin-top: 20px}
 /* End Main Header */
 /* Start Main Nav */
-.navigation {
+.navigation {margin-top: 30px;overflow: hidden;}
+.navigation.scrolling {
+  position: fixed;
+  left: 0;
+  margin-top: 0;
+  background-color: var(--white);
+  box-shadow: -1px -1px 2px 0 #000;
+}
+.nav {
   height: 80px;
   padding-right: 15px;
   padding-left: 15px;
-  margin-top: 30px;
-  background-color: var(--white);
+  width: 100%;
+  background-color: var(--white)
 }
-.navigation .logo h4 {line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
-.navigation .logo h4:first-letter {
+.navigation.scrolling .nav {padding-right: 0;padding-left: 0;}
+.nav .logo h4 {line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
+.nav .logo h4:first-letter {
   background-color: var(--light-orange);
   border-radius: 50%;
   padding: 0 .3em;
   color: var(--white)
 }
-.navigation ul {line-height: 80px;text-transform: uppercase}
-.navigation li {
+.nav ul {line-height: 80px;text-transform: uppercase}
+.nav li {
   padding-right: 15px;
   padding-left: 15px;
-  transition: all .5s ease;
+  transition: background .5s ease;
   cursor: pointer
 }
-.navigation li.active, nav li:hover {
+.nav li.active, nav li:hover {
   background-color: var(--light-orange);
   color: var(--white);
 }
+.nav .menu {margin-top: 25px}
+.nav .menu i {cursor: pointer}
+.nav .links .close {
+  visibility: hidden;
+  position: absolute;
+  right: 50px;
+  top: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+.nav .links.active .close {
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+.nav .links .close i {
+  color: var(--white);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer
+}
+.nav .links .close:hover i {color: var(--light-orange)}
+@media (max-width: 767px) {
+  .nav .links {
+    visibility: hidden;
+    background-color: var(--darker-gray);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    padding-right: 50px;
+    padding-left: 50px;
+    z-index: -1;
+  }
+  .nav .links.active {
+    visibility: visible;
+    height: 100%;
+    z-index: 80;
+  }
+  .nav .links ul {
+    visibility: hidden;
+    position: relative;
+    line-height: 40px;
+    color: var(--white);
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease
+  }
+  .nav .links.active ul {visibility: visible}
+  .nav .links ul li {padding-top: 0px}
+  .nav .links .close {
+    -webkit-transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    transition-duration: .1s
+  }
+  .nav .links.active .close {top: 30px;visibility: visible}
+}
 /* End Main Nav */
 /* Start About Me */
-section.about {padding-top: 60px;padding-bottom: 60px}
+section.about {padding-top: 60px;padding-bottom: 60px;overflow: hidden;}
+section.about .image {visibility: hidden;animation-duration: 1s}
+section.about .image.active {visibility: visible}
 section.about .image img {width: 300px;height: 300px}
+section.about .profile-info {visibility: hidden;animation-duration: 1s}
+section.about .profile-info.active {visibility: visible}
 section.about .profile-info .profile-title {
   border-bottom: 1px solid var(--light-gray);
   margin-top: 32px;
@@ -78,7 +163,12 @@ section.about .profile-info li span {color: var(--light-gray)}
 }
 /* End About Me */
 /* Start Skills */
-section.skills {background-color: var(--lighter-gray);padding-top: 60px;padding-bottom: 60px}
+section.skills {
+  background-color: var(--lighter-gray);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden
+}
 section.skills h2 {text-align: center}
 section.skills .progress-list {margin-top: 30px}
 section.skills .progress-info {margin-bottom: 20px}
@@ -93,16 +183,172 @@ section.skills .progress-info .progress-percent span {
   top: 0;
   left: 0;
   height: 100%;
+  width: 0%;
   line-height: 30px;
   display: flex;
   flex-direction: row-reverse;
   padding-right: 5px;
   background-color: var(--light-orange);
-  color: var(--white)
+  color: var(--white);
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease
 }
-section.skills .progress-info:first-of-type .progress-percent span {width: 90%}
-section.skills .progress-info:nth-of-type(2) .progress-percent span {width: 85%}
-section.skills .progress-info:nth-of-type(3) .progress-percent span {width: 80%}
-section.skills .progress-info:nth-of-type(4) .progress-percent span {width: 80%}
-section.skills .progress-info:nth-of-type(5) .progress-percent span {width: 75%}
+section.skills .progress-info.active:first-of-type .progress-percent span {width: 90%}
+section.skills .progress-info.active:nth-of-type(2) .progress-percent span {width: 85%}
+section.skills .progress-info.active:nth-of-type(3) .progress-percent span {width: 80%}
+section.skills .progress-info.active:nth-of-type(4) .progress-percent span {width: 80%}
+section.skills .progress-info.active:nth-of-type(5) .progress-percent span {width: 75%}
 /* End Skills */
+/* Start My Work */
+section.work {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: -10px;
+  margin-left: -10px;
+  overflow: hidden;
+}
+section.work h2 {text-align: center}
+section.work .items {margin-top: 40px}
+section.work .contain {
+  visibility: hidden;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  perspective: 200px;
+  animation-duration: 1s
+}
+section.work .contain.active {visibility: visible}
+section.work .contain .item {
+  height: 250px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 1px 1px 5px 0px var(--light-gray);
+  -moz-box-shadow: 1px 1px 5px 0px var(--light-gray);
+  -o-box-shadow: 1px 1px 5px 0px var(--light-gray);
+  box-shadow: 1px 1px 5px 0px var(--light-gray);
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -o-transition: all .5s linear;
+  transition: all .5s linear
+}
+section.work .contain .item:hover {
+  -webkit-transform: translateZ(-10px);
+  -moz-transform: translateZ(-10px);
+  -o-transform: translateZ(-10px);
+  transform: translateZ(-10px)
+}
+section.work .contain .item.soon {background-image: url(../images/work/soon.png);}
+section.work .contain:first-child .item {background-image: url(../images/work/1.jpg)}
+section.work .contain:nth-child(2) .item {background-image: url(../images/work/2.jpg)}
+section.work .contain .item .overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(51, 51, 51, .7);
+  visibility: hidden;
+}
+section.work .contain .item:hover .overlay {visibility: visible}
+section.work .contain .item .overlay i {color: var(--white)}
+/* End My Work */
+/* Start Footer */
+footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--light-orange);
+  overflow: hidden;
+}
+footer .copyright p {color: var(--darker-gray);margin: 0;font-size: 20px}
+footer .social {margin-top: 10px}
+footer .social a {margin-left: 5px;margin-bottom: 10px;border-radius: 10px}
+footer .social img {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-top: 0;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+footer .social a:hover img {margin-top: -5px}
+/* End Footer */
+/* Start Popup */
+.popup .item {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 8000;
+  animation-duration: .5s;
+}
+.popup .item.active {visibility: visible}
+.popup .item .simplebar-track {display: none}
+.popup .item.active .simplebar-track {display: inline-block}
+.popup .item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0
+}
+.popup .item .content {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  background-color: var(--darker-gray);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 40px
+}
+.popup .item .image {
+  height: 100%;
+  border: 2px solid var(--light-orange);
+}
+.popup .item .image img {width: 100%;}
+.popup .item .info {position: relative;padding-left: 20px}
+.popup .item .project-info {
+  position: relative;
+  padding: 20px;
+  color: var(--white);
+  font-size: 1.3em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.popup .item .project-info h2 {font-size: 40px;color: var(--light-gray)}
+.popup .item .project-info h4 {font-size: 30px;color: var(--light-gray)}
+.popup .item .project-info ol {margin-top: 15px}
+.popup .item .project-info button {margin-top: 10px}
+.popup .item .close {position: absolute;right: 0;top: 0}
+.popup .item .close i {
+  color: var(--white);
+  -webkit-transition: color .5s linear;
+  -moz-transition: color .5s linear;
+  -o-transition: color .5s linear;
+  transition: color .5s linear;
+  cursor: pointer
+}
+.popup .item .close i:hover {color: var(--light-orange)}
+@media (max-width: 575px) {
+  .popup .item .content {padding: 10px}
+  .popup .item .info {padding-left: 0}
+}
+/* End Popup */

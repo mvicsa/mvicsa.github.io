@@ -20,19 +20,42 @@
 }
 * {
   font-family: 'Tajawal';
-  color: var(--dark-gray)
 }
 :root {
   --white: #F8F8F8;
   --red: #da1146;
   --light-orange: #fd8469;
-  --darker-gray: #151515;
+  --darker-gray: #333;
   --dark-gray: #3d4451;
-  --light-gray: #9da0a7;
+  --light-gray: #AAA; /* #9da0a7 */
   --lighter-gray: #efefef;
 }
 body {
   background-color: var(--white);
-  color: var(--darker-gray)
+  color: var(--darker-gray);
+  overflow-x: hidden
 }
-ul {list-style: none;padding: 0;color: var(--dark-gray)}
+ul {list-style: none;padding: 0;color: var(--darker-gray)}
+button {
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  color: var(--darker-gray);
+  -webkit-transition-property: background, color;
+  -moz-transition-property: background, color;
+  -o-transition-property: background, color;
+  transition-property: background, color;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+button:hover {
+  background-color: var(--light-orange);
+  color: var(--white)
+}
