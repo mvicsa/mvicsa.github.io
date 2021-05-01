@@ -40,7 +40,10 @@ button {
   background-color: var(--white);
   border: none;
   outline: none;
-  padding: 8px 20px;
+  min-width: 100px;
+  width: 130px;
+  max-width: 250px;
+  height: 40px;
   color: var(--darker-gray);
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
