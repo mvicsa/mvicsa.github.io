@@ -1,8 +1,6 @@
 @import url(style.css);
 /* Start Main Header */
-header.main {
-  position: relative;
-}
+header.main {position: relative}
 header.main .slider {
   position: relative;
   background-image: url(../images/slider.jpg);
@@ -45,12 +43,17 @@ header.main .welcome button {margin-top: 20px}
   background-color: var(--white)
 }
 .navigation.scrolling .nav {padding-right: 0;padding-left: 0;}
-.nav .logo h4 {line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
-.nav .logo h4:first-letter {
+.nav .logo h4 {display: inline;line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
+.nav .logo span {
+  display: inline-block;
   background-color: var(--light-orange);
   border-radius: 50%;
-  padding: 0 .3em;
-  color: var(--white)
+  padding: 0;
+  height: 33px;
+  width: 33px;
+  text-align: center;
+  color: var(--white);
+  font-size: 1.4rem;
 }
 .nav ul {line-height: 80px;text-transform: uppercase}
 .nav li {
@@ -66,21 +69,12 @@ header.main .welcome button {margin-top: 20px}
 .nav .menu {margin-top: 25px}
 .nav .menu i {cursor: pointer}
 .nav .links .close {
-  visibility: hidden;
+  display: none;
   position: absolute;
   right: 50px;
-  top: 0;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease
+  top: 0
 }
-.nav .links.active .close {
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease
-}
+.nav .links.active .close {display: block}
 .nav .links .close i {
   color: var(--white);
   -webkit-transition: all .5s ease;
@@ -113,18 +107,19 @@ header.main .welcome button {margin-top: 20px}
     z-index: 80;
   }
   .nav .links ul {
-    visibility: hidden;
     position: relative;
     line-height: 40px;
     color: var(--white);
     top: 50%;
+    height: 0px;
     transform: translateY(-50%);
-    -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+    overflow: hidden
   }
-  .nav .links.active ul {visibility: visible}
+  .nav .links.active ul {height: 160px}
   .nav .links ul li {padding-top: 0px}
   .nav .links .close {
     -webkit-transition-duration: .1s;
