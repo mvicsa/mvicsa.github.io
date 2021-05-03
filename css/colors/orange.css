@@ -1,0 +1,5 @@
+:root {--main-color: #fd8469}
+.simplebar-scrollbar:before {background-color: var(--main-color)}
+section.about .image {background-image: url(../../images/user/user-orange.jpg)}
+section.skills .progress-info .progress-percent {background-color: rgb(253 132 105 / .2)}
+section.work .contain .item.soon {background-image: url(../../images/work/soon-orange.png)}

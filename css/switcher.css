@@ -1,0 +1,63 @@
+.switcher {
+  position: fixed;
+  width: 220px;
+  height: auto;
+  top: 50%;
+  left: -220px;
+  background-color: var(--darker-gray);
+  z-index: 1000;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: left .5s ease;
+  -moz-transition: left .5s ease;
+  -o-transition: left .5s ease;
+  transition: left .5s ease
+}
+.switcher.active {left: 0}
+.switcher .settings {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: var(--darker-gray);
+  text-align: center;
+  right: -50px;
+  top: 0;
+  cursor: pointer
+}
+.switcher .settings i {
+  color: var(--main-color);
+  line-height: 50px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+.switcher .settings:hover i {color: var(--white)}
+.switcher-title {
+  height: 50px;
+  color: var(--white);
+  background: -webkit-linear-gradient(left, #fd8469, #825aad, #f34572, #da1146);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  border-right: 1px solid var(--dark-gray);
+  border-bottom: 1px solid var(--dark-gray)
+}
+.switcher-title h5 {line-height: 50px;text-transform: uppercase}
+ul.switcher-colors {padding: 20px;margin-bottom: 0}
+ul.switcher-colors li {padding-right: 3px;padding-left: 3px}
+ul.switcher-colors li span {
+  display: block;
+  width: 100%;
+  height: 45px;cursor: pointer;
+  -webkit-transition: opacity .5s ease;
+  -moz-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease
+}
+ul.switcher-colors li span.orange {background-color: #fd8469}
+ul.switcher-colors li span.purple {background-color: #825aad}
+ul.switcher-colors li span:hover {opacity: .7}

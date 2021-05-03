@@ -9,6 +9,8 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/simplebar.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link id="color" rel="stylesheet" href="css/colors/orange.css" />
+    <link rel="stylesheet" href="css/switcher.css" />
     <script src="js/simplebar.min.js"></script>
   </head>
   <body>
@@ -58,9 +60,7 @@
     <section class="about" data-target="about">
       <div class="container">
         <div class="d-flex flex-wrap col-12 col-lg-9 col-xl-8 col-xxl-7 m-auto">
-          <div class="image d-flex m-auto col-md-6">
-            <img src="images/user.png" alt="MOHAMED" />
-          </div>
+          <div class="image d-flex m-auto col-md-6"></div>
           <div class="profile-info col-12 col-md-6">
             <div class="profile-title text-center text-md-start">
               <h4><span>I'm</span> MOHAMED HASSAN</h4>
@@ -295,10 +295,31 @@
       <!-- End Item -->
     </div>
     <!-- End Popup -->
+    <!-- Start Switcher -->
+    <div class="switcher">
+      <div class="settings">
+        <i class="fad fa-cog fa-2x"></i>
+      </div>
+      <div class="switcher-title">
+        <h5>Choose Color</h5>
+      </div>
+      <ul class="switcher-colors d-flex">
+        <li class="col-3" title="Orange">
+          <span class="orange"></span>
+        </li>
+        <li class="col-3" title="Purple">
+          <span class="purple"></span>
+        </li>
+      </ul>
+    </div>
+    <!-- End Switcher -->
     <!-- Start Go Top -->
-    <div class="gotop"><i class="fad fa-chevron-up fa-2x"></i></div>
+    <div class="gotop">
+      <i class="fad fa-chevron-up fa-2x"></i>
+    </div>
     <!-- End Go Top -->
     <scriptss src="js/bootstrap.min.js"></scriptss>
     <script src="js/main.js"></script>
+    <script src="js/switcher.js"></script>
   </body>
 </html>
