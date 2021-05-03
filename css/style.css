@@ -1,6 +1,5 @@
 /* Font Awesome */
 @import url(fontawesome.min.css);
-@import url(normalize.css);
 :root {
   --white: #F8F8F8;
   --red: #da1146;
