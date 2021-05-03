@@ -1,22 +1,20 @@
 /* Font Awesome */
 @import url(fontawesome.min.css);
+@import url(normalize.css);
 :root {
   --white: #F8F8F8;
   --red: #da1146;
   --light-orange: #fd8469;
   --darker-gray: #333;
-  --dark-gray: #3d4451;
+  --dark-gray: #444; /* #3d4451 */
   --light-gray: #AAA; /* #9da0a7 */
   --lighter-gray: #efefef;
 }
-body {
-  background-color: var(--white);
-  color: var(--darker-gray);
-  overflow-x: hidden
-}
-ul {list-style: none;padding: 0;color: var(--darker-gray)}
-button {
-  background-color: var(--white);
+body {background-color: var(--white, #F8F8F8);color: var(--darker-gray, #333)}
+ul {list-style: none;padding: 0;color: var(--darker-gray, #333)}
+a.my-btn {
+  display: inline-block;
+  background-color: var(--light-orange, #fd8469);
   border: none;
   outline: none;
   min-width: 100px;
@@ -24,7 +22,7 @@ button {
   max-width: 250px;
   padding-top: 10px;
   padding-bottom: 10px;  
-  color: var(--darker-gray);
+  color: var(--white, #F8F8F8);
   -webkit-transition-property: background, color;
   -moz-transition-property: background, color;
   -o-transition-property: background, color;
@@ -37,8 +35,39 @@ button {
   -moz-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
+  text-decoration: none;
+  text-align: center
 }
-button:hover {
-  background-color: var(--light-orange);
-  color: var(--white)
+a.my-btn:hover {background-color: var(--darker-gray, #333)}
+/* Start To Top Button */
+.gotop {
+  visibility: hidden;
+  position: fixed;
+  background-color: var(--light-orange, #fd8469);
+  width: 40px;
+  height: 40px;
+  right: 40px;
+  bottom: 40px;
+  text-align: center;
+  border: 1px solid var(--darker-gray, #333);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  opacity: 0
 }
+.gotop.active {visibility: visible;opacity: 1}
+.gotop:hover {
+  background-color: var(--darker-gray, #333);
+  border: 1px solid var(--light-orange, #fd8469)
+}
+.gotop i {
+  line-height: 40px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
+}
+.gotop:hover i {color: var(--light-orange, #fd8469)}
+/* End To Top Button */

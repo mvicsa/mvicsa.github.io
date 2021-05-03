@@ -193,3 +193,25 @@ popupOver.forEach((el) => {
   };
 
 });
+
+/***************
+*    Go Top    *
+***************/
+let goTop = document.querySelector('.gotop');
+
+let gotoTop = () => {
+
+  if (document.documentElement.scrollTop >= 400) {
+
+    goTop.classList.add('active');
+
+  } else {
+
+    goTop.classList.remove('active');
+
+  }
+
+  goTop.onclick = () => document.documentElement.scrollTop = 0;
+
+}
+window.addEventListener('scroll', gotoTop);

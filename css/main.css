@@ -14,91 +14,94 @@ header.main .slider .overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--darker-gray);
+  background-color: var(--darker-gray, #333);
   opacity: .7
 }
-header.main .welcome {
-  position: relative;
-  top: 300px;
-  z-index: 2
-}
-header.main .welcome h1 {color: var(--white)}
-header.main .welcome p {font-size: 20px;color: var(--white);width: 80%;margin: 0 auto}
-header.main .welcome button {margin-top: 20px}
+header.main .welcome {position: relative;top: 300px;z-index: 2}
+header.main .welcome h1 {color: var(--white, #F8F8F8)}
+header.main .welcome p {font-size: 20px;color: var(--white, #F8F8F8);width: 80%;margin: 0 auto}
+header.main .welcome a.my-btn {margin-top: 20px}
 /* End Main Header */
 /* Start Main Nav */
 .navigation {
   margin-top: 30px;
   overflow: hidden;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease
 }
 .navigation.scrolling {
   position: fixed;
   left: 0;
   margin-top: 0;
-  background-color: var(--white);
-  box-shadow: -1px -1px 2px 0 #000;
+  background-color: var(--white, #F8F8F8);
+  -moz-box-shadow: -1px -1px 2px 0 #000;
+  -webkit-box-shadow: -1px -1px 2px 0 #000;
+  box-shadow: -1px -1px 2px 0 #000
 }
 .nav {
   height: 80px;
   padding-right: 15px;
   padding-left: 15px;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--white, #F8F8F8);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
   transition: all 1s ease
 }
 .navigation.scrolling .nav {padding-right: 0;padding-left: 0;}
-.nav .logo h4 {display: inline;line-height: 80px;text-transform: uppercase;color: var(--darker-gray)}
+.nav .logo h4 {
+  display: inline;
+  line-height: 80px;
+  text-transform: uppercase;
+  color: var(--darker-gray, #333)
+}
 .nav .logo span {
   display: inline-block;
-  background-color: var(--light-orange);
+  background-color: var(--light-orange, #fd8469);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   padding: 0;
   height: 33px;
   width: 33px;
   text-align: center;
-  color: var(--white);
-  font-size: 1.3rem;
+  color: var(--white, #F8F8F8);
+  font-size: 1.3rem
 }
 .nav ul {line-height: 80px;text-transform: uppercase}
 .nav li {
   padding-right: 15px;
   padding-left: 15px;
+  -webkit-transition: background .5s ease;
+  -moz-transition: background .5s ease;
+  -o-transition: background .5s ease;
   transition: background .5s ease;
   cursor: pointer
 }
 .nav li.active, nav li:hover {
-  background-color: var(--light-orange);
-  color: var(--white);
+  background-color: var(--light-orange, #fd8469);
+  color: var(--white, #F8F8F8);
 }
 .nav .menu {margin-top: 25px}
 .nav .menu i {cursor: pointer}
-.nav .links .close {
-  display: none;
-  position: absolute;
-  right: 50px;
-  top: 0
-}
+.nav .links .close {display: none;position: absolute;right: 50px;top: 0}
 .nav .links.active .close {display: block}
 .nav .links .close i {
-  color: var(--white);
+  color: var(--white, #F8F8F8);
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
   cursor: pointer
 }
-.nav .links .close:hover i {color: var(--light-orange)}
+.nav .links .close:hover i {color: var(--light-orange, #fd8469)}
 @media (max-width: 767px) {
   .nav .links {
     visibility: hidden;
-    background-color: var(--darker-gray);
+    background-color: var(--darker-gray, #333);
     position: fixed;
     top: 0;
     left: 0;
@@ -112,17 +115,16 @@ header.main .welcome button {margin-top: 20px}
     padding-left: 50px;
     z-index: -1;
   }
-  .nav .links.active {
-    visibility: visible;
-    height: 100%;
-    z-index: 80;
-  }
+  .nav .links.active {visibility: visible;height: 100%;z-index: 80}
   .nav .links ul {
     position: relative;
     line-height: 40px;
-    color: var(--white);
+    color: var(--white, #F8F8F8);
     top: 50%;
     height: 0px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transform: translateY(-50%);
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
@@ -132,28 +134,32 @@ header.main .welcome button {margin-top: 20px}
   }
   .nav .links.active ul {height: 160px}
   .nav .links ul li {padding-top: 0px}
-  .nav .links .close {
-    -webkit-transition-duration: .1s;
-    -moz-transition-duration: .1s;
-    -o-transition-duration: .1s;
-    transition-duration: .1s
-  }
-  .nav .links.active .close {top: 30px;visibility: visible}
+  .nav .links.active .close {top: 30px}
 }
 /* End Main Nav */
 /* Start About Me */
-section.about {padding-top: 60px;padding-bottom: 60px;overflow: hidden;}
-section.about .image {visibility: hidden;animation-duration: 1s}
+section.about {padding-top: 60px;padding-bottom: 60px;overflow: hidden}
+section.about .image {
+  visibility: hidden;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s
+}
 section.about .image.active {visibility: visible}
 section.about .image img {width: 300px;height: 300px}
-section.about .profile-info {visibility: hidden;animation-duration: 1s}
+section.about .profile-info {
+  visibility: hidden;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s
+}
 section.about .profile-info.active {visibility: visible}
 section.about .profile-info .profile-title {
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--light-gray, #AAA);
   margin-top: 32px;
   margin-bottom: 20px
 }
-section.about .profile-info .profile-title h4 {color: var(--dark-gray);font-weight: 600}
+section.about .profile-info .profile-title h4 {color: var(--dark-gray, #444);font-weight: 500}
 section.about .profile-info .profile-title h4 span {font-weight: 300}
 section.about .profile-info .profile-title p {font-size: 22px}
 section.about .profile-info li {margin-top: 10px}
@@ -163,14 +169,14 @@ section.about .profile-info li strong {
   font-weight: 500;
   text-transform: uppercase
 }
-section.about .profile-info li span {color: var(--light-gray)}
+section.about .profile-info li span {color: var(--light-gray, #AAA)}
 @media (max-width: 400px) {
   section.about .image img {width: 200px;height: 200px}
 }
 /* End About Me */
 /* Start Skills */
 section.skills {
-  background-color: var(--lighter-gray);
+  background-color: var(--lighter-gray, #efefef);
   padding-top: 60px;
   padding-bottom: 60px;
   overflow: hidden
@@ -194,8 +200,8 @@ section.skills .progress-info .progress-percent span {
   display: flex;
   flex-direction: row-reverse;
   padding-right: 5px;
-  background-color: var(--light-orange);
-  color: var(--white);
+  background-color: var(--light-orange, #fd8469);
+  color: var(--white, #F8F8F8);
   -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
   -o-transition: all 2s ease;
@@ -226,18 +232,20 @@ section.work .contain {
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+  -webkit-perspective: 200px;
   perspective: 200px;
-  animation-duration: 1s
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
 }
 section.work .contain.active {visibility: visible}
 section.work .contain .item {
   height: 250px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 1px 1px 5px 0px var(--light-gray);
-  -moz-box-shadow: 1px 1px 5px 0px var(--light-gray);
-  -o-box-shadow: 1px 1px 5px 0px var(--light-gray);
-  box-shadow: 1px 1px 5px 0px var(--light-gray);
+  -webkit-box-shadow: 1px 1px 5px 0px var(--light-gray, #AAA);
+  -moz-box-shadow: 1px 1px 5px 0px var(--light-gray, #AAA);
+  box-shadow: 1px 1px 5px 0px var(--light-gray, #AAA);
   -webkit-transition: all .5s linear;
   -moz-transition: all .5s linear;
   -o-transition: all .5s linear;
@@ -261,27 +269,37 @@ section.work .contain .item .overlay {
   height: 100%;
   cursor: pointer;
   text-align: center;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
   justify-content: center;
   background-color: rgba(51, 51, 51, .7);
-  visibility: hidden;
+  visibility: hidden
 }
 section.work .contain .item:hover .overlay {visibility: visible}
-section.work .contain .item .overlay i {color: var(--white)}
+section.work .contain .item .overlay i {color: var(--white, #F8F8F8)}
 /* End My Work */
 /* Start Footer */
 footer {
   padding-top: 80px;
   padding-bottom: 80px;
-  background-color: var(--light-orange);
+  background-color: var(--light-orange, #fd8469);
   overflow: hidden;
 }
-footer .copyright p {color: var(--darker-gray);margin: 0;font-size: 20px}
+footer .copyright p {color: var(--darker-gray, #333);margin: 0;font-size: 20px}
 footer .social {margin-top: 10px}
-footer .social a {margin-left: 5px;margin-bottom: 10px;border-radius: 10px}
+footer .social a {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px
+}
 footer .social img {
   width: 40px;
   height: 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
   margin-top: 0;
   -webkit-transition: all .5s ease;
@@ -299,12 +317,25 @@ footer .social a:hover img {margin-top: -5px}
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 8000;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
   transition: all .5s ease;
-  transform: scale(.3, .3);
+  -webkit-transform: scale(.3);
+  -moz-transform: scale(.3);
+  -o-transform: scale(.3);
+  transform: scale(.3);
+  z-index: 8000;
   opacity: 0
 }
-.popup .item.active {visibility: visible;transform: scale(1, 1);opacity: 1}
+.popup .item.active {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 1
+}
 .popup .item .simplebar-scrollbar {display: none !important}
 .popup .item.active .simplebar-scrollbar {display: block !important}
 .popup .item .overlay {
@@ -320,7 +351,7 @@ footer .social a:hover img {margin-top: -5px}
   height: 80%;
   top: 50%;
   left: 50%;
-  background-color: var(--darker-gray);
+  background-color: var(--darker-gray, #333);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -329,32 +360,35 @@ footer .social a:hover img {margin-top: -5px}
 }
 .popup .item .image {
   height: 100%;
-  border: 2px solid var(--light-orange);
+  border: 2px solid var(--light-orange, #fd8469);
 }
 .popup .item .image img {width: 100%;}
 .popup .item .info {position: relative;padding-left: 20px}
 .popup .item .project-info {
   position: relative;
   padding: 20px;
-  color: var(--white);
-  font-size: 1.3em;
+  color: var(--white, #F8F8F8);
+  font-size: 1.2em;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%)
 }
-.popup .item .project-info h2 {font-size: 40px;color: var(--light-gray)}
-.popup .item .project-info h4 {font-size: 30px;color: var(--light-gray)}
+.popup .item .project-info h2 {font-size: 40px;color: var(--light-gray, #AAA)}
+.popup .item .project-info h4 {font-size: 30px;color: var(--light-gray, #AAA)}
 .popup .item .project-info ol {margin-top: 15px}
-.popup .item .project-info button {margin-top: 10px}
+.popup .item .project-info a.my-btn {margin-top: 10px}
 .popup .item .close {position: absolute;right: 0;top: 0}
 .popup .item .close i {
-  color: var(--white);
+  color: var(--white, #F8F8F8);
   -webkit-transition: color .5s linear;
   -moz-transition: color .5s linear;
   -o-transition: color .5s linear;
   transition: color .5s linear;
   cursor: pointer
 }
-.popup .item .close i:hover {color: var(--light-orange)}
+.popup .item .close i:hover {color: var(--light-orange, #fd8469)}
 @media (max-width: 575px) {
   .popup .item .content {padding: 10px}
   .popup .item .info {padding-left: 0}
