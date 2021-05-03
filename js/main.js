@@ -171,12 +171,7 @@ workItems.children.forEach((el, index) => {
 
   if (!el.children[0].classList.contains('soon')) {
 
-    el.onclick = () => {
-
-      popup.children[index].classList.add('active');
-      popup.children[index].classList.add('animate__zoomIn');
-
-    };
+    el.onclick = () => popup.children[index].classList.add('active');
 
   }
 
@@ -184,12 +179,7 @@ workItems.children.forEach((el, index) => {
 
 popupClose.forEach((el) => {
 
-  el.onclick = () => {
-    
-    el.parentNode.parentNode.parentNode.classList.remove('active');
-    el.parentNode.parentNode.parentNode.classList.remove('animate__zoomIn');
-
-  };
+  el.onclick = () => el.parentNode.parentNode.parentNode.classList.remove('active');
 
 });
 

@@ -139,7 +139,7 @@
 .simplebar-scrollbar:before {
   position: absolute;
   content: '';
-  background: #fd846950;
+  background: #fd8469;
   left: 2px;
   right: 2px;
   opacity: 0;

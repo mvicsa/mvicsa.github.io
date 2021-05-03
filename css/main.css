@@ -300,9 +300,11 @@ footer .social a:hover img {margin-top: -5px}
   top: 0;
   left: 0;
   z-index: 8000;
-  animation-duration: .5s;
+  transition: all .5s ease;
+  transform: scale(.3, .3);
+  opacity: 0
 }
-.popup .item.active {visibility: visible}
+.popup .item.active {visibility: visible;transform: scale(1, 1);opacity: 1}
 .popup .item .simplebar-scrollbar {display: none !important}
 .popup .item.active .simplebar-scrollbar {display: block !important}
 .popup .item .overlay {
