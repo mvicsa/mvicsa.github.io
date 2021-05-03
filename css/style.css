@@ -1,5 +1,6 @@
 /* Font Awesome */
 @import url(fontawesome.min.css);
+@import url(normalize.css);
 :root {
   --white: #F8F8F8;
   --red: #da1146;
@@ -54,7 +55,7 @@ a.my-btn:hover {background-color: var(--darker-gray, #333)}
   -o-transition: all .5s ease;
   transition: all .5s ease;
   cursor: pointer;
-  z-index: 8000;
+  z-index: 2000;
   opacity: 0
 }
 .gotop.active {visibility: visible;opacity: 1}
