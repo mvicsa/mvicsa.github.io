@@ -214,4 +214,6 @@ let gotoTop = () => {
   goTop.onclick = () => document.documentElement.scrollTop = 0;
 
 }
+
 window.addEventListener('scroll', gotoTop);
+window.addEventListener('load', gotoTop);

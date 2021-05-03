@@ -55,6 +55,7 @@ a.my-btn:hover {background-color: var(--darker-gray, #333)}
   -o-transition: all .5s ease;
   transition: all .5s ease;
   cursor: pointer;
+  z-index: 8000;
   opacity: 0
 }
 .gotop.active {visibility: visible;opacity: 1}
