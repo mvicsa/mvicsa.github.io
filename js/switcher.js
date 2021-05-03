@@ -4,7 +4,7 @@ const colorStyle = document.getElementById('color'),
       switchColors = document.querySelector('.switcher .switcher-colors');
 
 
-switchSetting.onclick = function () {
+switchSetting.onclick = () => {
       
   switcher.classList.toggle('active');
 
