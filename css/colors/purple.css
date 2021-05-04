@@ -1,5 +1,4 @@
 :root {--main-color: #825aad}
-.simplebar-scrollbar:before {background-color: var(--main-color)}
 section.about .image {background-image: url(../../images/user/user-purple.jpg)}
 section.skills .progress-info .progress-percent {background-color: rgb(130 90 173 / .2)}
 section.work .contain .item.soon {background-image: url(../../images/work/soon-purple.png)}

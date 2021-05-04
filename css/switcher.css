@@ -46,7 +46,9 @@
   border-right: 1px solid var(--dark-gray);
   border-bottom: 1px solid var(--dark-gray)
 }
+
 .switcher-title h5 {line-height: 50px;text-transform: uppercase}
+.switcher-title h5::selection {background-clip: border-box;-webkit-text-fill-color: var(--main-color)}
 ul.switcher-colors {padding: 20px;margin-bottom: 0}
 ul.switcher-colors li {padding-right: 3px;padding-left: 3px}
 ul.switcher-colors li span {

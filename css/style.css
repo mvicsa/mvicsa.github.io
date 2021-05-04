@@ -1,6 +1,7 @@
 /* Font Awesome */
 @import url(fontawesome.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {font-family: 'Poppins', sans-serif}
 :root {
   --white: #F8F8F8;
   --red: #da1146;
@@ -9,7 +10,7 @@
   --light-gray: #AAA; /* #9da0a7 */
   --lighter-gray: #efefef;
 }
-* {font-family: 'Poppins', sans-serif;}
+::selection {background-color: var(--dark-gray);color: var(--main-color)}
 body {background-color: var(--white);color: var(--darker-gray)}
 ul {list-style: none;padding: 0;color: var(--darker-gray)}
 a.my-btn {
@@ -40,6 +41,7 @@ a.my-btn {
   border: 1px solid var(--darker-gray)
 }
 a.my-btn:hover {background-color: var(--darker-gray);border: 1px solid var(--main-color)}
+.simplebar-scrollbar:before {background-color: var(--main-color)}
 /* Start To Top Button */
 .gotop {
   visibility: hidden;
