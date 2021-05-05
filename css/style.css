@@ -1,7 +1,12 @@
 /* Font Awesome */
 @import url(fontawesome.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-* {font-family: 'Poppins', sans-serif}
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0
+}
+h1, h2, h3, h4, h5, h6 {margin-bottom: 0}
 :root {
   --white: #F8F8F8;
   --red: #da1146;
@@ -64,7 +69,10 @@ a.my-btn:hover {background-color: var(--darker-gray);border: 1px solid var(--mai
 .gotop.active {visibility: visible;opacity: 1}
 .gotop:hover {background-color: var(--darker-gray);border: 1px solid var(--main-color)}
 .gotop i {
-  line-height: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
