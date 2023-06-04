@@ -250,7 +250,7 @@ section.work .contain {
 section.work .contain.active {visibility: visible}
 section.work .contain .item {
   height: 250px;
-  background-size: 100% 100%;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   -webkit-box-shadow: 1px 1px 5px 0px var(--light-gray);
   -moz-box-shadow: 1px 1px 5px 0px var(--light-gray);
