@@ -95,7 +95,7 @@ function sectionActive() {
         el.children[1].children[0].classList.add('animate__lightSpeedInLeft');
         el.children[1].children[1].classList.add('animate__rotateIn');
         el.children[1].children[2].classList.add('animate__lightSpeedInRight');
-        el.children[1].children[3].classList.add('animate__lightSpeedInLeft');
+//         el.children[1].children[3].classList.add('animate__lightSpeedInLeft');
         
 
       }
