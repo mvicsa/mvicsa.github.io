@@ -267,8 +267,6 @@ section.work .contain .item:hover {
   -o-transform: translateZ(-10px);
   transform: translateZ(-10px)
 }
-section.work .contain:first-child .item {background-image: url(../images/work/1.jpg)}
-section.work .contain:nth-child(2) .item {background-image: url(../images/work/2.jpg)}
 section.work .contain .item .overlay {
   position: absolute;
   display: flex;
